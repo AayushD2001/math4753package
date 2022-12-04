@@ -1,0 +1,48 @@
+---
+title: "What this package does"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{What this package does}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(FALL224753dala0003)
+```
+
+# Introduction
+This package contains functions used throughout the year.
+
+## The first function
+This function creates an n curve.
+```{r}
+FALL224753dala0003::myncurve(10,5)
+```
+
+## The second function
+This function creates a histogram, given n and the number of iterations in a matrix.
+```{r}
+FALL224753dala0003::myclt(10, 10000)
+```
+
+## The third function
+This function creates a histogram of a sample, given a specific quantitative variable in a given dataset
+```{r}
+library(Intro2R)
+newObj <- FALL224753dala0003::myboot2(x=ddt$DDT)
+newObj
+```
+
+## The fourth function
+This function will generate the maximum likelihood estimates.
+```{r}
+FALL224753dala0003::mymaxlikg(theta=seq(0,1,length=10000))
+```
